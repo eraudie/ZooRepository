@@ -22,6 +22,7 @@ namespace ZooDemo
 
 
             Console.WriteLine(dog.Weight);
+            Console.WriteLine(dog.Weight);
             Console.WriteLine(cat.Weight);
             Console.WriteLine(hamster.Weight);
             Console.WriteLine(topDog.Weight);
