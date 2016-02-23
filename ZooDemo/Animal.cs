@@ -3,25 +3,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 namespace ZooDemo
 {
-    abstract class Animal
+    abstract class Animal : IEatable
     {
         public Animal(double weight)
         {
             Weight = weight;
         }
-
-        public virtual void Eat(Animal animalToEat)
+        public virtual void Eat(IEatable thingToEat)
         {
-            this.Weight += animalToEat.Weight;
-            animalToEat.MakeDeathScream();
-            animalToEat.Weight = 0;
+            this.Weight += thingToEat.Weight;
+            thingToEat.MakeEatenSound();
+            thingToEat.Weight = 0;
         }
-        public abstract void MakeDeathScream();
+        public abstract void MakeEatenSound();
         public double Weight { get; set; }
-
-        
     }
 }

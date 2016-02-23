@@ -13,7 +13,7 @@ namespace ZooDemo
 
         }
 
-        public override void MakeDeathScream()
+        public override void MakeEatenSound()
         {
             Console.WriteLine("SQUEAK");
         }
